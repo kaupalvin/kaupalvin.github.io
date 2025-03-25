@@ -1,1 +1,0 @@
-# kaupalvin.github.io
