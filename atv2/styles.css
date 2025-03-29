@@ -8,7 +8,7 @@
     padding: 50px;
     background-color: rgb(13, 13, 138);
     text-align: center;
-    font-size: large;
+    font-size: x-large;
     color: white;
     border-bottom: 8px solid rgb(152, 195, 248);
 }
@@ -20,6 +20,7 @@ body{
 .font{
     font-family: Arial, Helvetica, sans-serif;
     color: rgb(13, 13, 138);
+    font-size: x-large;
 }
 
 .centerT{
@@ -31,7 +32,7 @@ body{
     border-left: 3px solid;
     padding: 10px 50px 10px 10px;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: medium;
+    font-size: x-large;
     text-align: end;
 }
 
@@ -39,7 +40,7 @@ body{
     border-right: 3px solid;
     padding: 10px;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: medium;
+    font-size: x-large;
     text-align: end;
 }
 
