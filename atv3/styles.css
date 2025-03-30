@@ -1,0 +1,67 @@
+body{
+    background-color: #faf7ea;
+}
+
+.font{
+    font-family: "Lucida Console", "Courier New", monospace;
+    color: #faf7ea;
+    text-shadow: 5px 5px 4px #240200;
+    font-size: xx-large;
+    text-align: center;
+}
+
+.head{
+    padding-top: 50px;
+    padding-bottom: 20px;
+    width: 100%;
+    background-color: #360906;
+    background-image: linear-gradient(#360906, #81534e);
+}
+
+.foot{
+    position: fixed;
+    padding-top: 50px;
+    padding-bottom: 5px;
+    bottom: 0;
+    width: 99%;
+    background-color: #360906;
+    background-image: linear-gradient(#81534e, #360906);
+}
+
+.box{
+    display: inline-block;
+    padding: 20px;
+}
+
+section{
+    position: fixed;
+    top: 250px;
+    left: 230px;
+    padding: 10px 15px 20px 20px;
+    width: calc(100% - 520px);
+    text-align: center;
+}
+
+img{
+    width: 250px;
+    height: 200px;
+    border-radius: 10px;
+    box-shadow: 9px 9px #360906;
+}
+
+img:hover{
+    width: 255px;
+    height: 205px;
+    border-radius: 10px;
+    box-shadow: 9px 9px #360906;
+}
+
+.tit{
+    display: none;
+    font-family: "Lucida Console", "Courier New", monospace;
+    color: #613230;
+    font-size: x-large;
+    text-align: center;
+    padding-top: 15px;
+    text-shadow: 1px 1px 2px #faf7ea, 0 0 25px #8b4138, 0 0 5px #913a30;
+}

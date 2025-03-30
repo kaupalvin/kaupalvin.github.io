@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <title>Home - Jogo da memória</title>
+</head>
+<body>
+    <header class="head">
+        <p class="font">Memory Game</p>
+    </header>
+    <div>
+        <script type="text/javascript">
+            function showhide(id, flag) {
+                const text = document.querySelector('#' + id);
+                if(flag == 0) text.style.setProperty('display', 'block')
+                else {
+                    text.style.setProperty('display', 'none')
+                }
+            }
+        </script>
+        <p class="tit" id="t1">Cachorrinhos</p>
+        <p class="tit" id="t2">Coelinhos</p>
+        <p class="tit" id="t3">Gatinhos</p>
+    </div>
+    <section>
+        <div class="box" onmouseover="showhide('t1', 0)" onmouseout="showhide('t1', 1)">
+            <a href="dog.html" target="_blank">
+                <img src="https://i.pinimg.com/736x/4f/65/dc/4f65dc9cb55f160eecc667d502ed79e2.jpg"
+                alt="Cachorro usando o computador">
+            </a>
+        </div>
+        <div class="box" onmouseover="showhide('t2', 0)" onmouseout="showhide('t2', 1)">
+            <a href="bunny.html" target="_blank">
+                <img src="https://i.pinimg.com/474x/5f/8a/df/5f8adf9ae5d20336ca0404c0420bf637.jpg"
+                alt="Coelho usando o computador">
+            </a>
+        </div>
+        <div class="box" onmouseover="showhide('t3', 0)" onmouseout="showhide('t3', 1)">
+            <a href="cat.html" target="_blank">
+                <img src="https://i.pinimg.com/474x/6f/cd/43/6fcd43f5761ae4418ebcdb8e8990fc31.jpg"
+                alt="Gato usando o computador">
+            </a>
+        </div>
+    </section>
+    <footer class="foot"></footer>
+</body>
+</html>
