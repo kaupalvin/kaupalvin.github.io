@@ -60,8 +60,25 @@ img:hover{
     display: none;
     font-family: "Lucida Console", "Courier New", monospace;
     color: #613230;
+    text-shadow: 1px 1px 2px #faf7ea, 0 0 25px #8b4138, 0 0 5px #913a30;
     font-size: x-large;
     text-align: center;
     padding-top: 15px;
-    text-shadow: 1px 1px 2px #faf7ea, 0 0 25px #8b4138, 0 0 5px #913a30;
+}
+
+.play{
+    font-family: "Lucida Console", "Courier New", monospace;
+    color: #360906;
+    text-shadow: 1px 1px 2px #faf7ea, 0 0 15px #8b4138, 0 0 25px #81534e;
+    text-align: center;
+    padding-left: 555px;
+}
+
+a:link, a:visited {
+    color: #360906;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #81534e;
 }
