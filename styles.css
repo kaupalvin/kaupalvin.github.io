@@ -1,51 +1,134 @@
-body{
-    background-color: #f9f4e2;
+body {
+    background-color: #fceff0;
+    display: grid;
+    min-height: 100vh;
+    grid-template-rows: 150px 1fr 15px;
+    grid-template-columns: 500px 1fr ;
+    grid-template-areas:
+    'topo topo'
+    'menu conteudo'
+    'rodape rodape';
 }
 
-.menu{
-    background-color: #592b26;
+* {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    grid-area: topo;
+    background-color: #9b1829;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 35px;
+}
+
+nav {
+    grid-area: menu;
+    background-color: #fceff0;
+    border-right: #9b1829 solid 1px;
+    display: flex;
+    align-items: center;
+}
+
+div{
     padding: 20px;
-    border-radius: 10px;
+    margin: 10px;
 }
 
-.font{
-    font-family: 'Courier New', Courier, monospace;
-    font-size: x-large;
-    color: #f9f4e2;
-    font-weight: normal;
-}
-
-.box{
+main {
+    grid-area: conteudo;
+    background-color: #fceff0;
     display: inline-block;
-    padding-left: 50px;
-    padding-right: 20px;
+    margin-top: 50px;
+    margin-left: 170px;
+    flex-direction: column;
+    gap: 20px;
+    align-items: flex-start;
 }
 
-.sec{
-    background-color: #a98457;
-    padding: 25px 40px 40px 40px;
-    border-radius: 10px;
-    margin-top: 25px;
-    margin-left: 420px;
-    margin-right: 420px;
+footer {
+    grid-area: rodape;
+    background-color: #9b1829;
+}
+
+.hide { }
+
+@media screen and (max-width: 800px) {
+    .hide {
+        display: none;
+    }
+    body {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+        'topo'
+        'conteudo';
+    }
+    main{
+        align-items: center;
+        margin: auto;
+        max-width: 450px;
+        width: 100%;
+    }
+    header{
+        padding: 5px;
+    }
+    font2{
+        font-size: smaller;
+    }
+}
+
+@font-face {
+    font-family: 'helveti93';
+    src: url('fonts/Helvetica\ Neue\ LT\ Std\ 93\ Black\ Extended.otf') format('truetype');
+}
+
+@font-face {
+    font-family: 'helveti53';
+    src: url('fonts/Helvetica\ Neue\ LT\ Std\ 53\ Extended.otf') format('truetype');
+}
+
+.font1{
+    font-family: "helveti53", sans-serif;
+    color: #fceff0;
+    cursor: default;
+}
+
+.font2{
+    font-family: "helveti93", sans-serif;
+    font-weight: 600;
+    font-size: x-large;
+    color: #fceff0;
+    cursor: default;
 }
 
 img{
-    border-radius: 50%;
-    width: 100px;
-    height: 100px;
-    border:#f9f4e2 solid 1px;
+    width: 600px;
+    height: 300px;
+    border-radius: 5px;
 }
 
-a:link, a:visited {
-    color: #f9f4e2;
+.text{
+    position: absolute;
+    font-family: "helveti53", sans-serif;
+    color:#fceff0;
+    z-index: 5;
+    padding: 30px;
+    padding-top: 120px;
+    padding-right: 300px;
+}
+
+a:link, a:visited{
+    color: #9b1829;
     text-decoration: none;
 }
 
 a:hover {
-    color: #bec789;
+    color: #9b1829bf;
+    cursor: pointer;
 }
 
 a:active{
-    color: #a85d5b;
+    color: #9b182955;
 }
