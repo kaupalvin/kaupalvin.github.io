@@ -114,9 +114,9 @@ img{
     font-family: "helveti53", sans-serif;
     color:#fceff0;
     z-index: 5;
-    padding: 30px;
+    max-width: 550px;
     padding-top: 110px;
-    padding-right: 300px;
+    padding-left: 15px;
 }
 
 a:link, a:visited{
