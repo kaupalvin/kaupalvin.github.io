@@ -140,13 +140,13 @@ a:active{
 ::-webkit-scrollbar-track {
     background: #fceff0;
 }
+
 ::-webkit-scrollbar-thumb {
     background: #9b1829fa;
     border-radius: 6px;
     border: #fceff0 solid 2px;
 }
 
-  /* Cor do thumb ao passar o mouse */
 ::-webkit-scrollbar-thumb:hover {
     background: #9b182992;
 }
