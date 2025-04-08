@@ -1,0 +1,99 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #fceff0;
+    display: grid;
+    min-height: 100vh;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+    'autent logo';
+}
+
+main{
+    grid-area: autent;
+    display: inline-block;
+    margin:50px;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+aside{
+    grid-area: logo;
+    background-image: url(scotland_yard.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+div{
+    padding: 10px;
+    display: flex;
+}
+
+@media(max-width: 800px) {
+    aside{
+        display: none;
+    }
+}
+
+.icon{
+    margin: 15px;
+    margin-left: 80px;
+    margin-right: 80px;
+}
+
+input{
+    text-decoration-line: none;
+    color: #fceff0;
+    width: 660px;
+    height: 23px;
+}
+
+input:focus {
+    outline: none;
+    border: #7c050f solid 2px;
+    border-radius: 3px;
+}
+
+@font-face {
+    font-family: 'helveti93';
+    src: url('fonts/Helvetica\ Neue\ LT\ Std\ 93\ Black\ Extended.otf') format('truetype');
+}
+
+@font-face {
+    font-family: 'helveti53';
+    src: url('fonts/Helvetica\ Neue\ LT\ Std\ 53\ Extended.otf') format('truetype');
+}
+
+.font1{
+    font-family: "helveti53", sans-serif;
+    color: #7c050f;
+    cursor: default;
+    font-size: x-large;
+    padding: 5px;
+}
+
+.font2{
+    font-family: "helveti93", sans-serif;
+    font-weight: 600;
+    font-size: xx-large;
+    color: #09146a;
+    cursor: default;
+}
+
+.botao{
+    color:#fceff0;
+    background-color: #09146a;
+    border-radius: 10px;
+    padding: 10px;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: large;
+}
+
+a:link{
+    text-decoration: none;
+    cursor: pointer;
+}

@@ -1,0 +1,92 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #fceff0;
+    display: grid;
+    min-height: 100vh;
+    grid-template-rows: 110px 90px 1fr 50px;
+    grid-template-areas: 'topo' 'titulo' 'conteudo' 'rodape';
+}
+
+header{
+    grid-area: topo;
+    background-color: #fceff0;
+    border-left: #09146a solid 50px;
+    border-right: #09146a solid 50px;
+    border-top: #09146a solid 5px;
+    border-bottom: #09146a solid 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+section{
+    grid-area: titulo;
+    background-color: #09146a;
+    border-top: #fceff0 solid 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+table{
+    width: 100%;
+    text-align: center;
+    border-collapse:collapse;
+}
+
+
+.hide { }
+
+@media screen and (max-width: 800px) {
+    .hide {
+        display: none;
+    }
+}
+
+footer{
+    grid-area: rodape;
+    background-color: #09146a;
+}
+
+@keyframes cores {
+    0%   {color: #09146a;}
+    25%  {color: #e7ab4a;}
+    50%  {color: #ebdcc1;}
+    75%  {color: #7c050f;}
+}
+
+img{
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+}
+
+@font-face {
+    font-family: 'helveti93';
+    src: url('fonts/Helvetica\ Neue\ LT\ Std\ 93\ Black\ Extended.otf') format('truetype');
+}
+
+@font-face {
+    font-family: 'helveti53';
+    src: url('fonts/Helvetica\ Neue\ LT\ Std\ 53\ Extended.otf') format('truetype');
+}
+
+.font1{
+    font-family: "helveti53", sans-serif;
+    color: #09146a;
+    cursor: default;
+    font-size: x-large;
+    padding: 5px;
+}
+
+.font2{
+    font-family: "helveti93", sans-serif;
+    font-weight: 600;
+    font-size: xx-large;
+    color: #e7ab4a;
+    cursor: default;
+}
