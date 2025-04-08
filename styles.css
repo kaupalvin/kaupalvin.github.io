@@ -1,3 +1,8 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
 body {
     background-color: #fceff0;
     display: grid;
@@ -10,11 +15,6 @@ body {
     'rodape rodape';
 }
 
-* {
-    margin: 0;
-    padding: 0;
-}
-
 header {
     grid-area: topo;
     background-color: #9b1829;
@@ -22,10 +22,6 @@ header {
     align-items: center;
     justify-content: center;
     gap: 35px;
-}
-
-.icone{
-    visibility: hidden;
 }
 
 nav {
@@ -57,6 +53,10 @@ footer {
     background-color: #9b1829;
 }
 
+.icone{
+    visibility: hidden;
+}
+
 .hide {
 }
 
@@ -73,11 +73,16 @@ footer {
     }
     nav {
         display: none;
-        grid-area: conteudo; /* nav toma o lugar do main */
+        grid-area: conteudo;
         flex-direction: column;
     }
     nav.show {
         display: flex;
+        align-items: center;
+        margin: auto;
+        max-width: 450px;
+        width: 100%;
+        border-right: 0;
     }
     main.hide {
         display: none;
@@ -98,30 +103,6 @@ footer {
     .font2{
         font-size: 24px !important;
     }
-}
-
-@font-face {
-    font-family: 'helveti93';
-    src: url('fonts/Helvetica\ Neue\ LT\ Std\ 93\ Black\ Extended.otf') format('truetype');
-}
-
-@font-face {
-    font-family: 'helveti53';
-    src: url('fonts/Helvetica\ Neue\ LT\ Std\ 53\ Extended.otf') format('truetype');
-}
-
-.font1{
-    font-family: "helveti53", sans-serif;
-    color: #fceff0;
-    cursor: default;
-}
-
-.font2{
-    font-family: "helveti93", sans-serif;
-    font-weight: 600;
-    font-size: x-large;
-    color: #fceff0;
-    cursor: default;
 }
 
 img{
