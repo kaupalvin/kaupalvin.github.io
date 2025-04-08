@@ -111,6 +111,30 @@ img{
     border-radius: 5px;
 }
 
+@font-face {
+    font-family: 'helveti93';
+    src: url('fonts/Helvetica\ Neue\ LT\ Std\ 93\ Black\ Extended.otf') format('truetype');
+}
+
+@font-face {
+    font-family: 'helveti53';
+    src: url('fonts/Helvetica\ Neue\ LT\ Std\ 53\ Extended.otf') format('truetype');
+}
+
+.font1{
+    font-family: "helveti53", sans-serif;
+    color: #fceff0;
+    cursor: default;
+}
+
+.font2{
+    font-family: "helveti93", sans-serif;
+    font-weight: 600;
+    font-size: x-large;
+    color: #fceff0;
+    cursor: default;
+}
+
 .text{
     position: absolute;
     font-family: "helveti53", sans-serif;
