@@ -26,9 +26,10 @@ body{
     background-color: #a98457;
     padding: 25px 40px 40px 40px;
     border-radius: 10px;
-    margin-top: 25px;
-    margin-left: 420px;
-    margin-right: 420px;
+    margin: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 img{
