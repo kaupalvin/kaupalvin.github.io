@@ -8,12 +8,26 @@
     <link rel="icon" href="img/raposita.png" type="image/png">
     <title>Home | Kau Atividades</title>
 </head>
+<script type="text/javascript">
+    function showHide() {
+        const nav = document.querySelector("nav");
+        const main = document.querySelector("main");
+        nav.classList.toggle("show");
+        if (nav.classList.contains("show")) {
+            main.classList.add("hide");
+        } else {
+            main.classList.remove("hide");
+        }
+    }
+</script>
 <body>
     <header>
         <h1 class="font2">Atividades Desenvolvimento Web</h1>
-        <h2 class="font2"><u>kauany</u></h2>
+        <h2 class="font2"><u>kau</u></h2>
+        <a class="font2" style="color: #fceff0;" href="#" onclick="showHide(); return false;">
+            <i class="icone fa-solid fa-bars"></i>
+        </a>
     </header>
-    <menu></menu>
     <nav class="hide">
         <div>
             <h2 class="font1" style="color: #9b1829;">1° bimestre</h2>

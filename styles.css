@@ -24,6 +24,10 @@ header {
     gap: 35px;
 }
 
+.icone{
+    visibility: hidden;
+}
+
 nav {
     grid-area: menu;
     background-color: #fceff0;
@@ -53,9 +57,10 @@ footer {
     background-color: #9b1829;
 }
 
-.hide { }
+.hide {
+}
 
-@media screen and (max-width: 800px) {
+@media(max-width: 800px) {
     .hide {
         display: none;
     }
@@ -63,7 +68,19 @@ footer {
         grid-template-columns: 1fr;
         grid-template-areas:
         'topo'
-        'conteudo';
+        'conteudo'
+        'rodape';
+    }
+    nav {
+        display: none;
+        grid-area: conteudo; /* nav toma o lugar do main */
+        flex-direction: column;
+    }
+    nav.show {
+        display: flex;
+    }
+    main.hide {
+        display: none;
     }
     main{
         align-items: center;
@@ -74,8 +91,12 @@ footer {
     header{
         padding: 5px;
     }
-    font2{
-        font-size: smaller;
+    .icone{
+        visibility: visible;
+        font-size: large;
+    }
+    .font2{
+        font-size: 24px !important;
     }
 }
 
