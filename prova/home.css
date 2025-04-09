@@ -6,6 +6,7 @@
 body {
     background-color: #fceff0;
     display: grid;
+    overflow: hidden;
     min-height: 100vh;
     grid-template-rows: 110px 90px 1fr 50px;
     grid-template-areas: 'topo' 'titulo' 'conteudo' 'rodape';
@@ -38,25 +39,71 @@ table{
     border-collapse:collapse;
 }
 
-
 .hide { }
 
 @media screen and (max-width: 800px) {
     .hide {
         display: none;
     }
+    header{
+        font-size: medium;
+    }
+    section{
+        font-size: medium;
+    }
+    table{
+        font-size: medium;
+    }
+    footer{
+        font-size: medium;
+    }
 }
 
 footer{
     grid-area: rodape;
     background-color: #09146a;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
-@keyframes cores {
+.aviao, .aviao2{
+    position: absolute;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+}
+
+.aviao{
+    right: 15px;
+    animation-name: giro2;
+}
+
+.aviao2{
+    left: 15px;
+    animation-name: giro;
+}
+
+@keyframes cores{
     0%   {color: #09146a;}
     25%  {color: #e7ab4a;}
     50%  {color: #ebdcc1;}
     75%  {color: #7c050f;}
+}
+
+@keyframes giro{
+    0%   {transform: rotate(0deg); left: 0px;}
+    25%  {transform: rotate(90deg); left: 250px;}
+    50%  {transform: rotate(180deg); left: 500px;}
+    75%  {transform: rotate(270deg); left: 250px;}
+    100% {transform: rotate(360deg); left: 0px;}
+}
+
+@keyframes giro2{
+    0%   {transform: rotate(0deg); right: 0px;}
+    25%  {transform: rotate(90deg); right: 250px;}
+    50%  {transform: rotate(180deg); right: 500px;}
+    75%  {transform: rotate(270deg); right: 250px;}
+    100% {transform: rotate(360deg); right: 0px;}
 }
 
 img{

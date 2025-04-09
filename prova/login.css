@@ -36,6 +36,10 @@ div{
     aside{
         display: none;
     }
+    main {
+        margin: 20px;
+        align-items: center;
+    }
 }
 
 .icon{
@@ -45,9 +49,12 @@ div{
 }
 
 input{
-    text-decoration-line: none;
-    color: #fceff0;
-    width: 660px;
+    border: none;
+    border-bottom: #7c050f solid 1px;
+    border-left: #7c050f solid 1px;
+    border-radius: 3px;
+    width: 100%;
+    max-width: 660px;
     height: 23px;
 }
 
