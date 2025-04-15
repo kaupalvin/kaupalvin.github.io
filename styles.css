@@ -8,7 +8,7 @@ body {
     display: grid;
     min-height: 100vh;
     grid-template-rows: 150px 1fr 15px;
-    grid-template-columns: 500px 1fr ;
+    grid-template-columns: 590px 1fr ;
     grid-template-areas:
     'topo topo'
     'menu conteudo'
@@ -20,8 +20,9 @@ header {
     background-color: #9b1829;
     display: flex;
     align-items: center;
-    justify-content: center;
-    gap: 35px;
+    justify-content: start;
+    padding-left: 25px;
+    gap: 50px;
 }
 
 nav {
@@ -30,6 +31,7 @@ nav {
     border-right: #9b1829 solid 1px;
     display: flex;
     align-items: center;
+    padding-left: 30px;
 }
 
 div{
