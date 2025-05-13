@@ -1,0 +1,120 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    display: grid;
+    min-height: 100vh;
+    grid-template-columns: 225px 1fr;
+    grid-template-areas:'info jogo'; 
+
+    background-image: url(/prova2/img/background.png);
+    background-size: cover;
+}
+
+aside{
+    grid-area: info;
+    z-index: 1;
+}
+
+main{
+    grid-area: jogo;
+    position: relative;
+    height: 100vh;
+    z-index: 2;
+}
+
+.div-info{
+    height: 30%;
+    width: 100%;
+
+    margin: 5px;
+    box-shadow: 0 8px 16px rgba(255, 255, 255, 0.5);
+}
+
+.icons{
+    height: 50px;
+    width: 50px;
+}
+
+.tela_pause{
+    background-color: rgba(128, 128, 128, 0.7);
+
+    width: 100vw;
+    height: 100vh;
+
+    position: fixed;
+    z-index: 9999;
+    display: none;
+
+    top: 0;
+    left: 0;
+}
+.estilo-nave {
+    position: absolute;
+    bottom: 0;
+    height: 150px;
+    width: 100px;
+    transition: left 0.1s;
+    left: 40%;
+    transform: translateX(-50%);
+}
+
+.estilo_missilD,
+.estilo_missilE {
+    position: absolute;
+    width: 20px;
+    height: 90px;
+    bottom: 30px;
+    transition: left 0.1s;
+}
+
+.estilo_missilD {
+    transform: translateX(6px);
+}
+
+.estilo_missilE {
+    transform: translateX(-27px);
+}
+
+@keyframes disparo {
+    0% {
+        bottom: 30px;
+    }
+    100% {
+        bottom: 100vh;
+    }
+}
+
+.disparar {
+    animation: disparo 0.8s linear forwards;
+}
+
+.container_nave{
+    height: 150px;
+    width: 84vw;
+
+}
+
+@keyframes movimentoAlien {
+    0% {
+        top: -7%;
+    }
+    100% {
+        top: 90%; 
+    }
+}
+
+.estilo_alien {
+    width:150px;
+    height: 75px;
+
+    position: absolute;
+    animation: movimentoAlien 15s linear infinite;
+    top: -7%;
+}
+
+.pausar {
+    animation-play-state: paused !important;
+}

@@ -1,0 +1,74 @@
+$bege: #faded2;
+$marrom: #845747;
+$pink: #b83556;
+$rosa: #dc97a5 ;
+$azul: #55768c;
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #fceff0;
+    display: grid;
+    min-height: 100vh;
+    grid-template-columns: 400px 1fr ;
+    grid-template-areas:
+    'muda conteudo';
+}
+
+nav{
+    grid-area: muda;
+    background-color: $bege;
+    border-right: $marrom solid 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+div{
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+    text-align: center;
+}
+
+main{
+    grid-area: conteudo;
+
+}
+
+.box1{
+    background-color: #b83556;
+    width: 55px;
+    height: 55px;
+    border-radius: 5px;
+    margin: 5px;
+}
+
+@font-face {
+    font-family: 'helveti93';
+    src: url('fonts/Helvetica\ Neue\ LT\ Std\ 93\ Black\ Extended.otf') format('truetype');
+}
+
+@font-face {
+    font-family: 'helveti53';
+    src: url('fonts/Helvetica\ Neue\ LT\ Std\ 53\ Extended.otf') format('truetype');
+}
+
+
+.font1{
+    font-family: "helveti53", sans-serif;
+    color: $marrom;
+    cursor: default;
+}
+
+.font2{
+    font-family: "helveti93", sans-serif;
+    font-weight: 600;
+    font-size: x-large;
+    color: $marrom;
+    cursor: default;
+}
