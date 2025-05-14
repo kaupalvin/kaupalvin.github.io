@@ -51,6 +51,7 @@
     </main>
 <div class="tela_pause justify-content-center align-items-center text-white" id="tela"><h1>PAUSE</h1></div>
 <div class="tela_derrota justify-content-center align-items-center text-white" id="derrota"><h1>YOU LOSE</h1></div>
+<div class="tela_vitoria justify-content-center align-items-center text-white" id="vitoria"><h1>YOU WIN</h1></div>
 </body>
 <script type="text/javascript">
 let val = 0;
@@ -115,12 +116,18 @@ function verificarPosicaoAlien(alien) {
                 document.querySelectorAll("td h5")[1].textContent = `LIFE: ${vida}`;
                 podePerderVida = false;
 
-                if (vida <= 0) {
-                    alert("Game Over!");
+                if (vida <= 0 && i === 1) {
+                    i = 0; 
                     clearInterval(tempo);
+
+                    let aliens = document.querySelectorAll(".estilo_alien");
+                    aliens.forEach(alien => {
+                        alien.classList.add('pausar');
+                    });
+
+                    document.querySelector("#derrota").style.display = 'flex';
                 }
 
-                // tempo de invulnerabilidade
                 setTimeout(() => {
                     podePerderVida = true;
                 }, 2000);

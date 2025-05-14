@@ -53,8 +53,7 @@ main{
 }
 
 .tela_derrota{
-    background-color: rgba(128, 128, 128, 0.7);
-
+    background-color: rgba(158, 5, 5, 0.7);
     width: 100vw;
     height: 100vh;
 
@@ -64,6 +63,24 @@ main{
 
     top: 0;
     left: 0;
+
+    font-size: 4rem;
+    font-weight: bold;
+}
+.tela_vitoria{
+    background-color: rgba(14, 114, 1, 0.7);
+    width: 100vw;
+    height: 100vh;
+
+    position: fixed;
+    z-index: 9999;
+    display: none;
+
+    top: 0;
+    left: 0;
+
+    font-size: 4rem;
+    font-weight: bold;
 }
 .estilo-nave {
     position: absolute;

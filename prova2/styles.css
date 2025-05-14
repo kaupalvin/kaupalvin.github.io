@@ -4,20 +4,26 @@
 }
 
 body {
+  display: -ms-grid;
   display: grid;
   min-height: 100vh;
-  grid-template-columns: 225px 1fr;
-  grid-template-areas: "info jogo";
-  background-image: url(/atv8/img/background.png);
+  -ms-grid-columns: 225px 1fr;
+      grid-template-columns: 225px 1fr;
+      grid-template-areas: 'info jogo';
+  background-image: url(/prova2/img/background.png);
   background-size: cover;
 }
 
 aside {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
   grid-area: info;
   z-index: 1;
 }
 
 main {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
   grid-area: jogo;
   position: relative;
   height: 100vh;
@@ -28,7 +34,8 @@ main {
   height: 30%;
   width: 100%;
   margin: 5px;
-  box-shadow: 0 8px 16px rgba(255, 255, 255, 0.5);
+  -webkit-box-shadow: 0 8px 16px rgba(255, 255, 255, 0.5);
+          box-shadow: 0 8px 16px rgba(255, 255, 255, 0.5);
 }
 
 .icons {
@@ -47,14 +54,42 @@ main {
   left: 0;
 }
 
+.tela_derrota {
+  background-color: rgba(158, 5, 5, 0.7);
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  z-index: 9999;
+  display: none;
+  top: 0;
+  left: 0;
+  font-size: 4rem;
+  font-weight: bold;
+}
+
+.tela_vitoria {
+  background-color: rgba(14, 114, 1, 0.7);
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  z-index: 9999;
+  display: none;
+  top: 0;
+  left: 0;
+  font-size: 4rem;
+  font-weight: bold;
+}
+
 .estilo-nave {
   position: absolute;
   bottom: 0;
   height: 150px;
   width: 100px;
+  -webkit-transition: left 0.1s;
   transition: left 0.1s;
   left: 40%;
-  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
 }
 
 .estilo_missilD,
@@ -63,15 +98,27 @@ main {
   width: 20px;
   height: 90px;
   bottom: 30px;
+  -webkit-transition: left 0.1s;
   transition: left 0.1s;
 }
 
 .estilo_missilD {
-  transform: translateX(6px);
+  -webkit-transform: translateX(6px);
+          transform: translateX(6px);
 }
 
 .estilo_missilE {
-  transform: translateX(-27px);
+  -webkit-transform: translateX(-27px);
+          transform: translateX(-27px);
+}
+
+@-webkit-keyframes disparo {
+  0% {
+    bottom: 30px;
+  }
+  100% {
+    bottom: 100vh;
+  }
 }
 
 @keyframes disparo {
@@ -82,13 +129,24 @@ main {
     bottom: 100vh;
   }
 }
+
 .disparar {
-  animation: disparo 0.8s linear forwards;
+  -webkit-animation: disparo 0.8s linear forwards;
+          animation: disparo 0.8s linear forwards;
 }
 
 .container_nave {
   height: 150px;
   width: 84vw;
+}
+
+@-webkit-keyframes movimentoAlien {
+  0% {
+    top: -7%;
+  }
+  100% {
+    top: 90%;
+  }
 }
 
 @keyframes movimentoAlien {
@@ -99,14 +157,18 @@ main {
     top: 90%;
   }
 }
+
 .estilo_alien {
   width: 150px;
   height: 75px;
   position: absolute;
-  animation: movimentoAlien 15s linear infinite;
+  -webkit-animation: movimentoAlien 15s linear infinite;
+          animation: movimentoAlien 15s linear infinite;
   top: -7%;
 }
 
 .pausar {
-  animation-play-state: paused !important;
-}/*# sourceMappingURL=styles.css.map */
+  -webkit-animation-play-state: paused !important;
+          animation-play-state: paused !important;
+}
+/*# sourceMappingURL=styles.css.map */
