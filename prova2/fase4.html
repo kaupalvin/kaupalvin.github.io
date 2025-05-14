@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="styles.css">
     <title>Jogo</title>
 </head>
-<body class="body_fase2" onload="Contagem(); movimentacaoAlien();">
+<body class="body_fase4" onload="Contagem(); movimentacaoAlien();">
     <aside>
         <div class="div-info bg-dark text-white rounded-bottom-lg d-flex justify-content-around align-items-center border border-1 border-white">
             <table class="table table-dark text-center w-auto">
@@ -40,9 +40,9 @@
         </div>
     </aside>
     <main>
-            <img src="/prova2/img/alien.png" class="estilo_alien2" id="alien1" >
-            <img src="/prova2/img/alien.png" class="estilo_alien2" id="alien2" >
-            <img src="/prova2/img/alien.png" class="estilo_alien2" id="alien3"  >
+            <img src="/prova2/img/alien.png" class="estilo_alien4" id="alien1" >
+            <img src="/prova2/img/alien.png" class="estilo_alien4" id="alien2" >
+            <img src="/prova2/img/alien.png" class="estilo_alien4" id="alien3"  >
         <div class="container_nave">
             <img src="/prova2/img/nave.png" class="estilo-nave" alt="nave" id="img_nave">
             <img src="/prova2/img/missil.png" class="estilo_missilD" alt="missil" id="img_missilD">
@@ -93,7 +93,7 @@ function pararContagem() {
 function reiniciarAlien(alien) {
     alien.style.animation = 'none';
     alien.offsetHeight;
-    alien.style.animation = 'movimentoAlien 11.25s linear infinite';
+    alien.style.animation = 'movimentoAlien 3.75s linear infinite';
     alien.style.top = '-7%';
 }
 let aliensAtingiramLimite = {
@@ -120,7 +120,7 @@ function verificarPosicaoAlien(alien) {
                     i = 0; 
                     clearInterval(tempo);
 
-                    let aliens = document.querySelectorAll(".estilo_alien2");
+                    let aliens = document.querySelectorAll(".estilo_alien4");
                     aliens.forEach(alien => {
                         alien.classList.add('pausar');
                     });
@@ -141,13 +141,13 @@ function verificarPosicaoAlien(alien) {
     }
 }
 function movimentacaoAlien() {
-    let aliens = document.querySelectorAll(".estilo_alien2");
+    let aliens = document.querySelectorAll(".estilo_alien4");
     let posicoes = [20, 40, 60];
     aliens.forEach((alien, index) => {
         alien.style.left = posicoes[index] + "%";
         alien.style.animation = 'none';
         alien.offsetHeight;
-        alien.style.animation = 'movimentoAlien 11.25s linear infinite';
+        alien.style.animation = 'movimentoAlien 3.75s linear infinite';
         setInterval(() => {
             verificarPosicaoAlien(alien);
         }, 100);
@@ -164,7 +164,7 @@ function verificarColisao(missil, alien) {
     );
 }
 function verificarColisaoEMatarAlien() {
-    const aliens = document.querySelectorAll(".estilo_alien2");
+    const aliens = document.querySelectorAll(".estilo_alien4");
     const misseis = [missilE, missilD];
     aliens.forEach(alien => {
         if (alien.style.display === "none") return;
@@ -174,29 +174,29 @@ function verificarColisaoEMatarAlien() {
             }
         });
     });
-    let alienAbatidos = document.querySelectorAll(".estilo_alien2[style*='display: none']").length;
+    let alienAbatidos = document.querySelectorAll(".estilo_alien4[style*='display: none']").length;
     document.querySelectorAll("td h5")[2].textContent = `ALIEN: ${alienAbatidos}`;
 }
 function verificarVitoria() {
-    let aliensAbatidos = document.querySelectorAll(".estilo_alien2[style*='display: none']").length;
+    let aliensAbatidos = document.querySelectorAll(".estilo_alien4[style*='display: none']").length;
     if (aliensAbatidos === 3) { 
         clearInterval(tempo); 
         document.querySelector("#vitoria").style.display = 'flex'; 
-        let aliens = document.querySelectorAll(".estilo_alien2");
+        let aliens = document.querySelectorAll(".estilo_alien4");
         aliens.forEach(alien => alien.classList.add('pausar')); 
         setTimeout(() => {
-            window.location.href = '/prova2/fase3.html'; 
+            window.location.href = '/prova2/vitoria.html'; 
         }, 3000); 
     }
 }
 setInterval(() => {
-    let aliens = document.querySelectorAll(".estilo_alien2");
+    let aliens = document.querySelectorAll(".estilo_alien4");
     aliens.forEach(alien => verificarPosicaoAlien(alien));
     verificarColisaoEMatarAlien();
     verificarVitoria(); 
 }, 100);
 setInterval(() => {
-    let aliens = document.querySelectorAll(".estilo_alien2");
+    let aliens = document.querySelectorAll(".estilo_alien4");
     aliens.forEach(alien => verificarPosicaoAlien(alien));
     verificarColisaoEMatarAlien();
 }, 100);
@@ -223,7 +223,7 @@ missilE.addEventListener('animationend', () => handleAnimationEnd(missilE));
 missilD.addEventListener('animationend', () => handleAnimationEnd(missilD));
 document.onkeypress = function (e) {
     if (e.keyCode === 112 || e.keyCode === 80) {
-        let aliens = document.querySelectorAll(".estilo_alien2");
+        let aliens = document.querySelectorAll(".estilo_alien4");
         if (i === 1) {
             pararContagem();
             pause.style.display = 'flex';

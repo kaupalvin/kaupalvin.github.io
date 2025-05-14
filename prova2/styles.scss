@@ -23,6 +23,26 @@
     background-size: cover;
 }
 
+.body_fase3{
+    display: grid;
+    min-height: 100vh;
+    grid-template-columns: 225px 1fr;
+    grid-template-areas:'info jogo'; 
+
+    background-image: url(/prova2/img/background3.jpg);
+    background-size: cover;
+}
+
+.body_fase4{
+    display: grid;
+    min-height: 100vh;
+    grid-template-columns: 225px 1fr;
+    grid-template-areas:'info jogo'; 
+
+    background-image: url(/prova2/img/background4.jpg);
+    background-size: cover;
+}
+
 aside{
     grid-area: info;
     z-index: 1;
@@ -162,6 +182,24 @@ main{
 
     position: absolute;
     animation: movimentoAlien 11.25s linear infinite;
+    top: -7%;
+}
+
+.estilo_alien3 {
+    width:150px;
+    height: 75px;
+
+    position: absolute;
+    animation: movimentoAlien 7.5s linear infinite;
+    top: -7%;
+}
+
+.estilo_alien4 {
+    width:150px;
+    height: 75px;
+
+    position: absolute;
+    animation: movimentoAlien 3.75s linear infinite;
     top: -7%;
 }
 
