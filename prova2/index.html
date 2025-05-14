@@ -134,8 +134,6 @@ function verificarPosicaoAlien(alien) {
             }
 
             reiniciarAlien(alien);
-
-            // resetar flag para esse alien
             setTimeout(() => {
                 aliensAtingiramLimite[id] = false;
             }, 2000);
@@ -179,6 +177,24 @@ function verificarColisaoEMatarAlien() {
     let alienAbatidos = document.querySelectorAll(".estilo_alien[style*='display: none']").length;
     document.querySelectorAll("td h5")[2].textContent = `ALIEN: ${alienAbatidos}`;
 }
+function verificarVitoria() {
+    let aliensAbatidos = document.querySelectorAll(".estilo_alien[style*='display: none']").length;
+    if (aliensAbatidos === 3) { 
+        clearInterval(tempo); 
+        document.querySelector("#vitoria").style.display = 'flex'; 
+        let aliens = document.querySelectorAll(".estilo_alien");
+        aliens.forEach(alien => alien.classList.add('pausar')); 
+        setTimeout(() => {
+            window.location.href = 'novaFase.html'; 
+        }, 3000); 
+    }
+}
+setInterval(() => {
+    let aliens = document.querySelectorAll(".estilo_alien");
+    aliens.forEach(alien => verificarPosicaoAlien(alien));
+    verificarColisaoEMatarAlien();
+    verificarVitoria(); 
+}, 100);
 setInterval(() => {
     let aliens = document.querySelectorAll(".estilo_alien");
     aliens.forEach(alien => verificarPosicaoAlien(alien));
