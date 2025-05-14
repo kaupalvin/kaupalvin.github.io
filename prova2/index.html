@@ -50,6 +50,7 @@
         </div>
     </main>
 <div class="tela_pause justify-content-center align-items-center text-white" id="tela"><h1>PAUSE</h1></div>
+<div class="tela_derrota justify-content-center align-items-center text-white" id="derrota"><h1>YOU LOSE</h1></div>
 </body>
 <script type="text/javascript">
 let val = 0;
@@ -99,6 +100,8 @@ let aliensAtingiramLimite = {
     alien2: false,
     alien3: false
 };
+let podePerderVida = true;
+
 function verificarPosicaoAlien(alien) {
     let alienRect = alien.getBoundingClientRect();
     let posicaoFinalTela = window.innerHeight;
@@ -106,13 +109,26 @@ function verificarPosicaoAlien(alien) {
     if (alienRect.bottom >= posicaoFinalTela - 150) {
         if (!aliensAtingiramLimite[id]) {
             aliensAtingiramLimite[id] = true;
-            vida--;
-            document.querySelectorAll("td h5")[1].textContent = `LIFE: ${vida}`;
-            if (vida <= 0) {
-                alert("Game Over!");
-                clearInterval(tempo);
+
+            if (podePerderVida) {
+                vida--;
+                document.querySelectorAll("td h5")[1].textContent = `LIFE: ${vida}`;
+                podePerderVida = false;
+
+                if (vida <= 0) {
+                    alert("Game Over!");
+                    clearInterval(tempo);
+                }
+
+                // tempo de invulnerabilidade
+                setTimeout(() => {
+                    podePerderVida = true;
+                }, 2000);
             }
+
             reiniciarAlien(alien);
+
+            // resetar flag para esse alien
             setTimeout(() => {
                 aliensAtingiramLimite[id] = false;
             }, 2000);
