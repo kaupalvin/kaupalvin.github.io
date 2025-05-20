@@ -5,33 +5,20 @@
 
 body {
   background-color: #fceff0;
-  display: -ms-grid;
   display: grid;
   min-height: 100vh;
-  -ms-grid-columns: 400px 1fr;
-      grid-template-columns: 400px 1fr;
-      grid-template-areas: 'muda conteudo';
+  grid-template-columns: 400px 1fr;
+  grid-template-areas: "muda conteudo";
 }
 
 nav {
-  -ms-grid-row: 1;
-  -ms-grid-column: 1;
   grid-area: muda;
   background-color: #faded2;
   border-right: #845747 solid 2px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 
 div {
@@ -42,8 +29,6 @@ div {
 }
 
 main {
-  -ms-grid-row: 1;
-  -ms-grid-column: 2;
   grid-area: conteudo;
 }
 
@@ -56,15 +41,13 @@ main {
 }
 
 @font-face {
-  font-family: 'helveti93';
+  font-family: "helveti93";
   src: url("fonts/Helvetica Neue LT Std 93 Black Extended.otf") format("truetype");
 }
-
 @font-face {
-  font-family: 'helveti53';
+  font-family: "helveti53";
   src: url("fonts/Helvetica Neue LT Std 53 Extended.otf") format("truetype");
 }
-
 .font1 {
   font-family: "helveti53", sans-serif;
   color: #845747;
@@ -77,5 +60,4 @@ main {
   font-size: x-large;
   color: #845747;
   cursor: default;
-}
-/*# sourceMappingURL=styles.css.map */
+}/*# sourceMappingURL=styles.css.map */
