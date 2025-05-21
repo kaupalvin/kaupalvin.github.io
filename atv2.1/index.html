@@ -19,10 +19,10 @@
                 </h2>
                 <div id="flush-collapseAssunto" class="accordion-collapse collapse" aria-labelledby="flush-assunto" data-bs-parent="#accordionForms">
                     <div class="accordion-body">
-                        <form id="formSubject" method="post" onsubmit="return false;">
+                        <form id="formSubject" method="post" onsubmit="addSubjects(); return false;">
                             <div class="form-floating mb-1">
-                                <input type="text" class="form-control" id="floatingInput" name="descricao" required>
-                                <label for="floatingInput">Descrição do Assunto</label>
+                                <input type="text" class="form-control" id="inputAssunto" name="nome" required>
+                                <label for="inputAssunto">Descrição do Assunto</label>
                             </div>
                             <input type="submit" class="btn btn-success" value="Salvar">
                         </form>
@@ -37,14 +37,14 @@
                 </h2>
                 <div id="flush-collapseRegional" class="accordion-collapse collapse" aria-labelledby="flush-regional" data-bs-parent="#accordionForms">
                     <div class="accordion-body">
-                        <form id="formRegional" method="post" onsubmit="return false;">
+                        <form id="formRegional" method="post" onsubmit="addRegionals(); return false;">
                             <div class="form-floating mb-1">
-                                <input type="text" class="form-control" id="floatingInput" name="sigla" required>
-                                <label for="floatingInput">Sigla da Regional</label>
+                                <input type="text" class="form-control" id="inputSigla" name="sigla" required>
+                                <label for="inputSigla">Sigla da Regional</label>
                             </div>
                             <div class="form-floating mb-1">
-                                <input type="text" class="form-control" id="floatingInput" name="cidade" required>
-                                <label for="floatingInput">Cidade da Regional</label>
+                                <input type="text" class="form-control" id="inputCidade" name="cidade" required>
+                                <label for="inputCidade">Cidade da Regional</label>
                             </div>
                             <input type="submit" class="btn btn-success" value="Salvar">
                         </form>
@@ -59,10 +59,10 @@
                 </h2>
                 <div id="flush-collapseAgente" class="accordion-collapse collapse" aria-labelledby="flush-agente" data-bs-parent="#accordionForms">
                     <div class="accordion-body">
-                        <form id="formAgent" method="post" onsubmit="return false;">
+                        <form id="formAgent" method="post" onsubmit="addAgents(); return false;">
                             <div class="form-floating mb-1">
-                                <input type="text" class="form-control" id="floatingInput" name="nome" required>
-                                <label for="floatingInput">Nome do Agente</label>
+                                <input type="text" class="form-control" id="inputNome" name="nome" required>
+                                <label for="inputNome">Nome do Agente</label>
                             </div>
                             <select class="form-select mb-1" name="regional" id="select_regional" required>
                                 <option selected disabled>Regional</option>
